@@ -58,9 +58,6 @@ public class Window {
 			public void mouseClicked(MouseEvent e) {
 				 new Thread(new LoginThread(Main._account, Main.ipaddr, Main._password, Main._mac)).start(); //登录的操作
 				  new Thread(new KeepThread()).start(); //心跳
-				  while (Main.res.isEmpty()) {
-					  textArea.setText(Main.res);
-				  }
 				  textArea.setText(Main.res);
 			}
 		});
